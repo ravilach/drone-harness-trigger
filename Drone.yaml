@@ -1,4 +1,4 @@
-#Drone CI File!
+#Drone CI File for Initial Build
 
 kind: pipeline
 type: kubernetes
