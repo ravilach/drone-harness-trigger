@@ -23,8 +23,8 @@ log.debug('Starting Plug-in')
 PostURL = "https://app.harness.io/gateway/api/webhooks/" + HARNESS_WEBHOOK_ID + '?accountId=' + ACCOUNT_ID
 log.debug('Post URL: ' + PostURL)
 
-#Formulate Payload
-# Python Object of Payload
+#Formulate Payload e.g https://docs.harness.io/article/xerirloz9a-add-a-trigger-2#payload_and_event_type_matrix
+#Python Object of Payload
 pythonPayload = {
   "application": APPLICATION_ID,
   "artifacts": [
