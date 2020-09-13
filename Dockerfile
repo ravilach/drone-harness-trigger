@@ -1,7 +1,7 @@
 FROM python:3.7.5-slim
 
 RUN mkdir /opt/app
-COPY app.py /opt/app
+COPY harness-trigger-plugin.py /opt/app
 WORKDIR /opt/app
 RUN pip install requests
 
