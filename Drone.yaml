@@ -1,0 +1,23 @@
+#Drone CI File!
+
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+
+- name: build
+  image: python
+  commands:
+  - pip install -r requirements.txt
+    
+- name: publish  
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: drone-harness-trigger
+    tags:
+      - '1.0.0'
