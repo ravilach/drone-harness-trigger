@@ -6,4 +6,4 @@ WORKDIR /opt/app
 RUN pip install requests
 
 ENTRYPOINT ["python"]
-CMD ["/opt/app/app.py"]
+CMD ["/opt/app/harness-trigger-plugin.py"]
