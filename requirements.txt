@@ -1,5 +1,1 @@
-###### Requirements For PIP Install ######`
 requests
-logging
-os
-json
