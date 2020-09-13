@@ -1,0 +1,2 @@
+###### Requirements For PIP Install ######`
+requests
