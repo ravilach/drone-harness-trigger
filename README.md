@@ -35,7 +35,7 @@ IDs, will leverage the Harness CI / Drone secrets manager.
 
 ```
 - name: harness-deploy
-  image: rlachhman/drone-harness-trigger
+  image: rlachhman/drone-harness-trigger:1.0.0
   settings:  
     accountid:
       from_secret: harness_accountid
