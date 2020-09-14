@@ -3,7 +3,7 @@ import requests
 import json
 
 #Example Python Application to call Harness Trigger
-#Leverages Requests and OS
+#Leverages Requests, JSON, and OS
 #@Authors Luis Redda and Ravi Lachhman
 
 #Harness CI / Drone Pipeline Variables
