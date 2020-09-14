@@ -20,4 +20,4 @@ steps:
       from_secret: docker_password
     repo: rlachhman/drone-harness-trigger
     tags:
-      - '1.0.1'
+      - '1.0.0'
