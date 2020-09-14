@@ -29,8 +29,8 @@ This example project utilizies the Harness CD Webhook integration. Can learn mor
 how a [Webhook Trigger in Harness](https://docs.harness.io/article/xerirloz9a-add-a-trigger-2#payload_and_event_type_matrix)
 is created. 
 
-## Usuage
-The usuage can follow the [example snippet](https://github.com/ravilach/drone-harness-trigger/blob/master/plug-in-snippet.yaml). Make sure to replace the values with yours. For sensitive
+## Usage
+The usage can follow the [example snippet](https://github.com/ravilach/drone-harness-trigger/blob/master/plug-in-snippet.yaml). Make sure to replace the values with yours. For sensitive
 IDs, will leverage the Harness CI / Drone secrets manager. 
 
 ```
