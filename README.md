@@ -47,7 +47,7 @@ IDs, will leverage the Harness CI / Drone secrets manager.
       from_secret: harness_webhookid
     harnessartifactname: "rlachhman_amazingapp"
     artifactversion: "1.0.1"
-    servicename: "CD Pipeline"
+    harnessservicename: "Amazing App"
 ```
 
 Happy plugin-ing!
