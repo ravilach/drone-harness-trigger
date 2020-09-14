@@ -49,5 +49,18 @@ IDs, will leverage the Harness CI / Drone secrets manager.
     artifactversion: "1.0.1"
     harnessservicename: "Amazing App"
 ```
+## Harness Field Mapping
+For the plugin can take a look at a detailed example in this [Harness Blog](https://harness.io/2020/09/your-first-cicd-plugin/)
+which describes setting up Harness CD. The field mapping below is what the plugin expects and where to find. 
+
+| Field          | Where to find| 
+| :------------- | :---------- | 
+| Account_ID | In Harness CD, your Harness Account ID, in the URL of your account, or the Manual Trigger view of your Harness Trigger.   | 
+| API_Key   | In Harness CD, under Security -> Access Management -> API Keys |
+| Application_ID | In Harness CD, in the Manual Trigger view of your Harness Trigger.  |
+| Artifact_Version | Either defined by what you want to deploy. Usually in your Docker Registry or Harness CI / Drone configuration.  |
+| Harness_Webhook_ID  | In Harness CD, in the Manual Trigger view of your Harness Trigger.  |
+| Harness_Service_Name  | Your Service you are deploying to. In this example was “Amazing App”. |
+| Harness_Artifact_Name   | The artifact name given to your Service. In this example was “rlachhman_amazingapp” representing the repository and image.  |
 
 Happy plugin-ing!
