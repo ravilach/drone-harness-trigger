@@ -1,7 +1,6 @@
 import os
 import requests
 import json
-import base64
 
 #Example Python Application to call Harness Trigger
 #Leverages Requests and OS
@@ -16,9 +15,6 @@ HARNESS_WEBHOOK_ID = os.environ.get('PLUGIN_HARNESSWEBHOOKID')
 HARNESS_SERVICE_NAME = os.environ.get('PLUGIN_HARNESSSERVICENAME')
 HARNESS_ARTIFACT_NAME = os.environ.get('PLUGIN_HARNESSARTIFACTNAME')
 
-#Decode if Necessary for Downstream System to Parse if in Drone Secret 
-ACCOUNT_ID_Decode = base64.b64decode(ACCOUNT_ID)
-
 print('Starting Harness Trigger Plug-in')
 
 #Harness HTTP API URL
@@ -27,9 +23,8 @@ print('Post URL: ' + PostURL)
 
 #Formulate Payload
 #Python Object of Payload
-print('Application ID Decode: ' + ACCOUNT_ID_Decode)
 pythonPayload = {
-  "application": APPLICATION_ID_Decode,
+  "application": APPLICATION_ID,
   "artifacts": [
         {"artifactSourceName": HARNESS_ARTIFACT_NAME, "buildNumber": ARTIFACT_VERSION, "service" : HARNESS_SERVICE_NAME}
   ]
