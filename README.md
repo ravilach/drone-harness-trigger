@@ -43,7 +43,7 @@ IDs, will leverage the Harness CI / Drone secrets manager.
       from_secret: harness_apikey
     applicationid: 
       from_secret: harness_applicationid
-     harnesswebhookid: 
+    harnesswebhookid: 
       from_secret: harness_webhookid
     artifactname: "rlachhman_amazingapp"
     artifactversion: "1.0.1"
