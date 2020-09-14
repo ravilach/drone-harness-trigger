@@ -1,6 +1,5 @@
 import os
 import requests
-import logging
 import json
 
 #Example Python Application to call Harness Trigger
@@ -16,14 +15,13 @@ HARNESS_WEBHOOK_ID = os.environ.get('PLUGIN_HARNESSWEBHOOKID')
 HARNESS_SERVICE_NAME = os.environ.get('PLUGIN_HARNESSSERVICENAME')
 HARNESS_ARTIFACT_NAME = os.environ.get('PLUGIN_HARNESSARTIFACTNAME')
 
-log = logging.getLogger("harness-trigger-plugin")
-log.debug('Starting Plug-in')
+print('Starting Harness Trigger Plug-in')
 
 #Harness HTTP API URL
 PostURL = "https://app.harness.io/gateway/api/webhooks/" + HARNESS_WEBHOOK_ID + '?accountId=' + ACCOUNT_ID
-log.debug('Post URL: ' + PostURL)
+print('Post URL: ' + PostURL)
 
-#Formulate Payload e.g https://docs.harness.io/article/xerirloz9a-add-a-trigger-2#payload_and_event_type_matrix
+#Formulate Payload
 #Python Object of Payload
 pythonPayload = {
   "application": APPLICATION_ID,
@@ -34,12 +32,15 @@ pythonPayload = {
 
 #Convert the Payload to JSON
 jsonPayload = json.dumps(pythonPayload)
+print('JSON Payload: ' + jsonPayload)
 
 #Fire Off Request
 response = requests.post(PostURL, headers={'x-api-key': API_KEY,'content-type' : 'application/json'},  data=jsonPayload)
 
 #Get and print Response
 jsonResponse = response.json()
+print("Request headers:", response.request.headers)
+print("Request body:", response.request.body)
 print(jsonResponse)
 
-log.debug('End Plug-in')
+print('End Plug-in')
