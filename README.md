@@ -49,9 +49,9 @@ IDs, will leverage the Harness CI / Drone secrets manager.
     artifactversion: "1.0.1"
     harnessservicename: "Amazing App"
 ```
-## Harness Field Mapping
+## Harness CD Field Mapping
 For the plugin can take a look at a detailed example in this [Harness Blog](https://harness.io/2020/09/your-first-cicd-plugin/)
-which describes setting up Harness CD. The field mapping below is what the plugin expects and where to find. 
+which describes setting up Harness CD. The field mapping below is what the plugin expects and where to find in Harness CD. 
 
 | Field          | Where to find| 
 | :------------- | :---------- | 
