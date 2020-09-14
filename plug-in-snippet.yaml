@@ -1,0 +1,17 @@
+#Scaffolding for Plugin
+
+- name: harness-deploy
+  image: rlachhman/drone-harness-trigger
+  settings:  
+    accountid:
+      from_secret: harness_accountid
+    apikey: 
+      from_secret: harness_apikey
+    applicationid: 
+      from_secret: harness_applicationid
+     harnesswebhookid: 
+      from_secret: harness_webhookid
+    artifactname: "rlachhman_amazingapp"
+    artifactversion: "1.0.1"
+    servicename: "CD Pipeline"
+    
